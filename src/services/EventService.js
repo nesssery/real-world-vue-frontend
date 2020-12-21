@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const apiClient = axios.create({
-  baseURL: "https://real-world-vue-gacq.onrender.com/api",
+  baseURL: "http://127.0.0.1:8000/api",
   withCredentials: false,
   header: {
     "Access-Control-Allow-Origin": "*",
@@ -15,6 +15,6 @@ export default {
     return apiClient.get("/events/")
   },
   getEvent(id) {
-    return apiClient.get("/events/" + id)
+    return apiClient.get("/events/" + id + "/")
   }
 }
